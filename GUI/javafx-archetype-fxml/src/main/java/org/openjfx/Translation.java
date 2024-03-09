@@ -8,13 +8,34 @@ import java.util.List;
 public class Translation {
     private static List<String> bokmålOrdbok = Arrays.asList("adgang","advarsel","være", "kommer", "man", "ble", "bare", "noe", "de", "si", "en", "et", "tro", "bo", "mye",
                                                             "disse", "gjør", "fikk", "vei", "sted", "fortsatt", "finnes", "sier", "jeg", "ikke", "hun", "fra", "da", "ham", "nå", "noen",
-                                                            "dem", "henne", "selv", "vært", "gikk", "meir", "hva", "hvor", "siden", "hele", "gang", "sammen", "skolen", "skal", "synes",
-                                                            "elsker", "norge", "gutt", "glemme", "glemmer", "glemt", "skriver", "skrevet", "skrev", "hatet", "hvorfor");
+                                                            "dem", "henne", "selv", "vært", "gikk", "mer", "hva", "hvor", "siden", "hele", "gang", "sammen", "skolen", "skal", "synes",
+                                                            "elsker", "norge", "gutt", "glemme", "glemmer", "glemt", "skriver", "skrevet", "skrev", "hatet", "hvorfor", "uke", "nærheten", "verken", "høre",
+                                                            "melk", "biler", "kaster", "kastet", "kaste", "nylig", "ærlig", "ovlig", "bolig", "mulig", "rolig", "hvordan", "fryktlig", "høylig", "lovlig", "synlig", "kunstlig", 
+                                                            "penger","grønn","rød","svart","hvit","trøtt","sulten","trist","dårlig","kjedelig","lavt","treg","fremdeles","øynene","hver","vanlig","gammel","sjelden","vanskelig","høy","lav",
+                                                            "engang", "ubruklig", "beboer", "kjærlighet", "bekreftelse", "sannhet", "drøm", "spise", "underlig", "syk", "hvis", "hode" ,"morgen", "følelse", "følelser", "følelsene",
+                                                            "hjem", "leke", "anderledes", "fornøyd", "velge", "hensyn", "kjedelig", "tenke", "nyhet", "hemmelighet", "hemmeligheter", "hemmelighetene", "selge", "tregere", "tregest", "øyne", "flere",
+                                                            "rettferdighet", "lærer", "lærere", "lærerene", "valg", "valget", "valgene"
+
+                                                            
+                                                            
+                                                            
+                                                            );
 
     private static List<String> nynorskOrdbok = Arrays.asList("tilgang", "åtvaring", "vere", "kjem", "ein", "vart", "berre", "nokon", "dei", "seie", "ein", "eit","tru","bu","mykje",
                                                             "desse", "gjer", "fekk", "veg", "stad", "framleis", "finst", "seier", "eg", "ikkje", "ho", "frå",   "då", "honom", "no", "noko",
-                                                            "dykk", "ho", "skjølv", "vore", "gjekk", "mer", "kva", "kor", "sidan", "heile", "gong", "saman", "skulen", "ska", "synast",
-                                                            "elskar", "noreg", "gut", "gløyme", "gløymer", "gløymt", "skriv", "skrive", "skreiv", "hata", "kvifor");
+                                                            "dykk", "ho", "skjølv", "vore", "gjekk", "meir", "kva", "kor", "sidan", "heile", "gong", "saman", "skulen", "ska", "synast",
+                                                            "elskar", "noreg", "gut", "gløyme", "gløymer", "gløymt", "skriv", "skrive", "skreiv", "hata", "kvifor", "veke", "nærleiken", "korkje", "høyre",
+                                                            "mjølk", "bilar", "kastar", "kasta", "kasta", "nyleg", "ærleg", "ovleg", "boleg", "mogleg", "roleg", "korleis", "frykteleg", "høgleg", "lovleg", "synleg", "kunstleg",
+                                                            "pengar","grøn","raud","svart","kvit","trøytt","svolten","trist","dårleg","kjedeleg","lågt","treig","framleis","augo","kvar","vanleg","gamal","sjeldan","vanskeleg","høg","låg",
+                                                            "eingong", "ubrukeleg", "bebuar", "kjærleik", "stadfesting", "sanning", "draum","ete", "underleg", "sjuk", "viss", "hovud", "morgon", "kjensla", "kjensler", "kjenslene",
+                                                            "heim", "leike", "annleis", "nøgd", "velje", "omsyn", "keisam", "tenkje", "nyheit", "løyndom", "løyndommar", "løyndommane", "selje", "treigare", "treigast", "augo", "fleire",
+                                                            "rettferd", "lærar", "lærarar", "lærarane", "val", "valet", "vala"
+                
+
+
+
+                                                            
+                                                            );
 
     
     private List<String> dividedText = new ArrayList<>();
@@ -87,7 +108,7 @@ public class Translation {
 
 
         
-        Translation demo = new Translation("Omar og Lejla liker ikkje nynorsk og dei vet ikkje kvifor det finnes, dei må ha gløymt det", false);
+        Translation demo = new Translation("jeg heter hode selv hvis", true);
         demo.getTranslation();
 
     }

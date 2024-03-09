@@ -1,6 +1,5 @@
 package org.openjfx;
 
-import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
