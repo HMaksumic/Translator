@@ -13,7 +13,7 @@ public class Translation {
 
     private static List<String> nynorskOrdbok = Arrays.asList("tilgang", "åtvaring", "vere", "kjem", "ein", "vart", "berre", "nokon", "dei", "seie", "ein", "eit","tru","bu","mykje",
                                                             "desse", "gjer", "fekk", "veg", "stad", "framleis", "finst", "seier", "eg", "ikkje", "ho", "frå",   "då", "honom", "no", "noko",
-                                                            "dei", "ho", "skjølv", "vore", "gjekk", "mer", "kva", "kor", "sidan", "heile", "gong", "saman", "skulen", "ska", "synast",
+                                                            "dykk", "ho", "skjølv", "vore", "gjekk", "mer", "kva", "kor", "sidan", "heile", "gong", "saman", "skulen", "ska", "synast",
                                                             "elskar", "noreg", "gut", "gløyme", "gløymer", "gløymt", "skriv", "skrive", "skreiv", "hata", "kvifor");
 
     
@@ -87,7 +87,7 @@ public class Translation {
 
 
         
-        Translation demo = new Translation("Det var en gang en kul gutt som het Hamza. Han hatet nynorsk veldig mye og skrev hele tiden om hvorfor han hatet nynorsk i norge", true);
+        Translation demo = new Translation("Omar og Lejla liker ikkje nynorsk og dei vet ikkje kvifor det finnes, dei må ha gløymt det", false);
         demo.getTranslation();
 
     }
