@@ -1,19 +1,20 @@
-package neretva;
+package org.openjfx;
 
+//hvis noen ser det her, så gjør jeg dette pga jeg aner ikke hvordan jeg importerer translationDemo hit :(((;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class TranslationDemo {
+public class Translation {
     private static List<String> bokmålOrdbok = Arrays.asList("adgang","advarsel","være", "kommer", "man", "ble", "bare", "noe", "de", "si", "en", "et", "tro", "bo", "mye",
                                                             "disse", "gjør", "fikk", "vei", "sted", "fortsatt", "finnes", "sier", "jeg", "ikke", "hun", "fra", "da", "ham", "nå", "noen",
                                                             "dem", "henne", "selv", "vært", "gikk", "meir", "hva", "hvor", "siden", "hele", "gang", "sammen", "skolen", "skal", "synes",
-                                                            "elsker", "norge");
+                                                            "elsker", "norge", "gutt", "glemme", "glemmer", "glemt", "skriver", "skrevet", "skrev", "hatet", "hvorfor");
 
     private static List<String> nynorskOrdbok = Arrays.asList("tilgang", "åtvaring", "vere", "kjem", "ein", "vart", "berre", "nokon", "dei", "seie", "ein", "eit","tru","bu","mykje",
                                                             "desse", "gjer", "fekk", "veg", "stad", "framleis", "finst", "seier", "eg", "ikkje", "ho", "frå",   "då", "honom", "no", "noko",
                                                             "dei", "ho", "skjølv", "vore", "gjekk", "mer", "kva", "kor", "sidan", "heile", "gong", "saman", "skulen", "ska", "synast",
-                                                            "elskar", "noreg");
+                                                            "elskar", "noreg", "gut", "gløyme", "gløymer", "gløymt", "skriv", "skrive", "skreiv", "hata", "kvifor");
 
     
     private List<String> dividedText = new ArrayList<>();
@@ -24,7 +25,7 @@ public class TranslationDemo {
     boolean bokmålStatus;
 
     
-    TranslationDemo(String text, boolean bokmålStatus) {
+    Translation(String text, boolean bokmålStatus) {
         this.bokmålStatus = bokmålStatus;
         text.toLowerCase();
 
@@ -86,7 +87,7 @@ public class TranslationDemo {
 
 
         
-        TranslationDemo demo = new TranslationDemo("jeg elsker norge", true);
+        Translation demo = new Translation("Det var en gang en kul gutt som het Hamza. Han hatet nynorsk veldig mye og skrev hele tiden om hvorfor han hatet nynorsk i norge", true);
         demo.getTranslation();
 
     }
