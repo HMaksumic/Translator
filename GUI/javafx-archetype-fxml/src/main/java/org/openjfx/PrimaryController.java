@@ -1,5 +1,7 @@
 package org.openjfx;
 
+import java.io.IOException;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
@@ -16,10 +18,11 @@ public class PrimaryController {
     @FXML
     private Label outputLabel;
 
-    //@FXML
-    //private void switchToSecondary() throws IOException {
-    //    App.setRoot("secondary");
-    //}
+    @FXML
+    private void switchToSecondary() throws IOException {
+        App.setRoot("secondary");
+
+    }
 
     @FXML
     public void translateText() {

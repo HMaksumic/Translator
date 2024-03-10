@@ -7,12 +7,13 @@
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" prefHeight="316.0" prefWidth="470.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.PrimaryController">
+<VBox alignment="CENTER" maxHeight="320.0" maxWidth="470.0" prefHeight="320.0" prefWidth="470.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.PrimaryController">
    <children>
       <Label text="Oversetter" />
-      <CheckBox fx:id="bokmålBoolean" mnemonicParsing="false" text="Til nynorsk fra bokmål?" />
+      <CheckBox fx:id="bokmålBoolean" mnemonicParsing="false" text="Bokmål til nynorsk?" selected="true"/>
       <SplitPane prefHeight="160.0" prefWidth="200.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="157.0" prefWidth="428.0">
@@ -23,7 +24,15 @@
             </AnchorPane>
         </items>
       </SplitPane>
-      <Button fx:id="primaryButton" onAction="#translateText" text="Oversett" />
+      <HBox maxWidth="85.0" prefHeight="25.0" prefWidth="422.0">
+         <children>
+            <Button fx:id="primaryButton" onAction="#translateText" text="Oversett" />
+            <Button mnemonicParsing="false" text="?" fx:id="manualButton" onAction="#switchToSecondary"/>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
    </children>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

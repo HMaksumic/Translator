@@ -14,7 +14,7 @@ public class Translation {
                                                             "engang", "ubruklig", "beboer", "kjærlighet", "bekreftelse", "sannhet", "drøm", "spise", "underlig", "syk", "hvis", "hode" ,"morgen", "følelse", "følelser", "følelsene",
                                                             "hjem", "leke", "anderledes", "fornøyd", "velge", "hensyn", "kjedelig", "tenke", "nyhet", "hemmelighet", "hemmeligheter", "hemmelighetene", "selge", "tregere", "tregest", "øyne", "flere",
                                                             "rettferdighet", "lærer", "lærere", "lærerene", "valg", "valget", "valgene","boligen","boliger","boligene",
-                                                            "venner", "vennene"
+                                                            "venner", "vennene", "hater", "hate", "bilene"
 
                                                             
                                                             
@@ -30,7 +30,7 @@ public class Translation {
                                                             "eingong", "ubrukeleg", "bebuar", "kjærleik", "stadfesting", "sanning", "draum","ete", "underleg", "sjuk", "viss", "hovud", "morgon", "kjensla", "kjensler", "kjenslene",
                                                             "heim", "leike", "annleis", "nøgd", "velje", "omsyn", "keisam", "tenkje", "nyheit", "løyndom", "løyndommar", "løyndommane", "selje", "treigare", "treigast", "augo", "fleire",
                                                             "rettferd", "lærar", "lærarar", "lærarane", "val", "valet", "vala", "bustaden","bustader", "bustadene",
-                                                            "vennar", "vennane"
+                                                            "vennar", "vennane", "hatar", "hata", "bilane"
                 
 
 
