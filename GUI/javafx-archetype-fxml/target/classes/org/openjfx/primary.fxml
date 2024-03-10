@@ -13,7 +13,7 @@
 <VBox alignment="CENTER" maxHeight="320.0" maxWidth="470.0" prefHeight="320.0" prefWidth="470.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.PrimaryController">
    <children>
       <Label text="Oversetter" />
-      <CheckBox fx:id="bokmålBoolean" mnemonicParsing="false" text="Bokmål til nynorsk?" selected="true"/>
+      <CheckBox fx:id="bokmålBoolean" mnemonicParsing="false" selected="true" text="Bokmål til nynorsk?" />
       <SplitPane prefHeight="160.0" prefWidth="200.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="157.0" prefWidth="428.0">
@@ -24,10 +24,11 @@
             </AnchorPane>
         </items>
       </SplitPane>
-      <HBox maxWidth="85.0" prefHeight="25.0" prefWidth="422.0">
+      <HBox maxWidth="148.0" prefHeight="25.0" prefWidth="148.0">
          <children>
             <Button fx:id="primaryButton" onAction="#translateText" text="Oversett" />
-            <Button mnemonicParsing="false" text="?" fx:id="manualButton" onAction="#switchToSecondary"/>
+            <Button fx:id="copyButton" mnemonicParsing="false" onAction="#copyToClipboard" text="Kopier" />
+            <Button fx:id="manualButton" mnemonicParsing="false" onAction="#switchToSecondary" text="?" />
          </children>
          <opaqueInsets>
             <Insets />
