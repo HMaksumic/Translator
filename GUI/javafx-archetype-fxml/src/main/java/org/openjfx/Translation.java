@@ -14,7 +14,14 @@ public class Translation {
                                                             "engang", "ubruklig", "beboer", "kjærlighet", "bekreftelse", "sannhet", "drøm", "spise", "underlig", "syk", "hvis", "hode" ,"morgen", "følelse", "følelser", "følelsene",
                                                             "hjem", "leke", "anderledes", "fornøyd", "velge", "hensyn", "kjedelig", "tenke", "nyhet", "hemmelighet", "hemmeligheter", "hemmelighetene", "selge", "tregere", "tregest", "øyne", "flere",
                                                             "rettferdighet", "lærer", "lærere", "lærerene", "valg", "valget", "valgene","boligen","boliger","boligene",
-                                                            "venner", "vennene", "hater", "hate", "bilene"
+                                                            "venner", "vennene", "hater", "hate", "bilene", "adkomstdokument", "aktelse", "aktpågivenhet", "aktsom", "aktsomhet", "alkoholholdig", "allmennheten", "alminnelig", "alminnelighet", "anbefale", "anbefaling", "anbud", "andel", "anerkjent",
+                                                            "anerkjenne", "anerkjennelse", "anførselstegn", "angi", "angivelse", "angå", "anklage", "anklagede", "ankomst", "anledning", "anmelde", "anmeldelse","politianmeldelse","bokanmeldelse", "anmeldelsen","anmeldelser","anmeldelsene", "anmerkning", "anmode",
+                                                            "politianmeldelsen","politianmeldelser","politianmeldelsene","bokanmeldelsen","bokanmeldelser","bokanmeldelsene",
+                                                            "anmodning", "anmodningsvedtak", "annerledes", "ansatt", "anselig", "ansette", "ansettelse", "anskaffe", "anskaffelse", "anslag", "anslagsvis", "anslå", "ansvarlig", "ansvarlighet", "ansvarlighetslov", "anta",
+                                                            "antakelig", "antakelse", "antall", "antatt", "antyde", "antydning", "anvende", "anvendelig", "anvendelighet", "anvendelse", "arbeidsledig",
+                                                            "nevne", "nevnte", "nevnes", "nevner", "nevnt", "nevn"
+
+
 
                                                             
                                                             
@@ -30,8 +37,16 @@ public class Translation {
                                                             "eingong", "ubrukeleg", "bebuar", "kjærleik", "stadfesting", "sanning", "draum","ete", "underleg", "sjuk", "viss", "hovud", "morgon", "kjensla", "kjensler", "kjenslene",
                                                             "heim", "leike", "annleis", "nøgd", "velje", "omsyn", "keisam", "tenkje", "nyheit", "løyndom", "løyndommar", "løyndommane", "selje", "treigare", "treigast", "augo", "fleire",
                                                             "rettferd", "lærar", "lærarar", "lærarane", "val", "valet", "vala", "bustaden","bustader", "bustadene",
-                                                            "vennar", "vennane", "hatar", "hata", "bilane"
-                
+                                                            "vennar", "vennane", "hatar", "hata", "bilane", "heimelsdokument", "vørnåd", "aktsamd", "aktsam", "aktsam", "alkoholhaldig", "folk", "almenn", "alminnelighet", "rå til", "tilråding", "anbod", "del", "akta",
+                                                            "godkjenne", "godkjenning", "hermeteikn", "angi", "avmerking", "gjelda", "klaga", "den skulda", "framkomst", "høve", "melda","melding","politimelding","bokmelding","meldinga","meldingar","meldigane", "merknad", "be",
+                                                            "politimeldinga","politimeldingar","politimeldingane","bokmeldinga","bokmeldingar","bokmeldingane",
+                                                            "oppmoding", "oppmodingsvedtak", "annleis", "tilsett", "monaleg", "tilsetja", "tilsetjing", "skaffa", "anskaffing", "overslag", "rundt rekna", "rekna til", "ansvarleg", "ansvarlegheit", "ansvarlegheitslov", "gå ut frå",
+                                                            "truleg", "godtaking", "tal", "pårekna", "nemna", "snev", "bruka", "brukande", "bruksverdi", "bruk", "arbeidslaus",
+                                                            "nemne", "nemnde", "nemnast", "nemner", "nemnt", "nemn"
+                                                            
+
+
+                                                        
 
 
 
