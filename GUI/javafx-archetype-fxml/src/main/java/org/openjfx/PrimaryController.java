@@ -27,6 +27,9 @@ public class PrimaryController {
     private Button copyButton;
 
     @FXML
+    private Button toFile;
+
+    @FXML
     private void switchToSecondary() throws IOException {
         App.setRoot("secondary");
 
@@ -56,6 +59,22 @@ public class PrimaryController {
         
         String translatedOutput = translate.getTranslation();
         outputLabel.setText(translatedOutput);
+
+    }
+
+    public void toFile() throws IOException {
+        String text = inputText.getText();
+        boolean bokmålStatus = bokmålBoolean.isSelected();
+        Translation translate = new Translation(text, bokmålStatus);
+        
+        String translatedOutput = translate.getTranslation();
+        translate.writeToFile(translatedOutput);
+
+        toFile.setText("Skrevet!");
+
+        PauseTransition delay = new PauseTransition(Duration.seconds(2)); //skaper en pause på 2 sek
+        delay.setOnFinished(actionEvent -> toFile.setText("Skriv til fil")); //setter teksten til knappen tilbake etter pausen
+        delay.play();
 
     }
 }

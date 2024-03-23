@@ -1,5 +1,9 @@
 package org.openjfx;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -35,22 +39,38 @@ public class Translation {
                                                             "bestilling", "bestillingsfullmakt", "bestå av", "betegnelse", "betinge", "betingelse",
                                                             "betinget", "betjene", "betrakte", "betraktning", "betryggende",
                                                             "bety","betyr", "betydelig", "betydning", "bevege", "bevegelse", "beveggrunn", "bevilge",
-                                                            "bevilgning", "bevilling", "bevisst", "bevissthet", "bidra", "bifalle","bidrar","tegn"
+                                                            "bevilgning", "bevilling", "bevisst", "bevissthet", "bidra", "bifalle","bidrar","tegn",
+                                                            "gangen" , "bud", "budet", "påbud", "påbudet", "mennesker", "inneholder", "inneholdte",
+                                                            "bakterier","bakteriene", "alvorlig",
+                                                            "forbud", "forbudte", "områder", "hunder", "hundene",
+                                                            "eier", "eieren", "dyrene", "tiltrekkende", "liggende", 
+                                                            "veier", "veiene", "stier", "kirkegårder", "kirke", "gård", "gårder", "gårdene", "gravplasser",
+                                                            "poser", "hundeposer",  "bilde", "bildet","bildene", "åpen", "selvsikker", "tar","finne", "personlig", "personlighet", "personlighetstype",
+                                                            "innenfor", "innen",  "åpenhet", "planmessighet", "omgjengelighet", "nysgjerrighet", "evnen", "tolerere", "usikkerhet", "selvdisiplin",
+                                                            "pliktoppfyllende", "oppfyllende","ansvarlig", "graden", "foretrekker", "tilbøyelig", "situasjoner", "situasjonene",
+                                                            "beskriver", "bygge", "bygger", "oppleve", "trekkene", "funnet",
+                                                            "brukes", "forutsi", "relasjoner", "personlighetspsykologi", "aspekter", "spiller", "spilte",
+                                                            "avgjørende", "verden", "vi", "strukturer", "strukturene", "familiestrukturer", "familiestrukturene",
+                                                            "metoder", "skiller", "resultater", "oppdragelse", "omfattende", "studer", "studiene", "gjelder", "landene",
+                                                            "sikrer", "familier", "ordninger", "legger", "kjønnene", "kontinenter", "kulturer", "kulturene",
+                                                            "rekke", "gjenspeiles", "speil", "speilet", "speilene", "deres", "forventninger", "prestasjonene", "prestasjoner",
+                                                            "oppdragelsen", "oppdratt", "høye", "tilhørighet", "endringer", "endringene", "økt", "økende", "øke", "mangfold", "mangfoldig",
+                                                            "typer", "anerkjennelsen", "dynamikker", "innvirkning", "endret", "hverandre", "implikasjoner", "tilgjengelighet",
+                                                            "erkjenne", "mangfoldet", "verdier", "utfordret", "styrke", "sammenhengen", "sammenheng", "krever",
+                                                            "forskere", "politikere", "utdanningsinstitusjoner", "politikerne", "ønsker", "tenker", "faktorer",
+                                                            "skjebner", "skjebne","skjebnene", "mens", "sliter", "avgjør", "fins", "teorier", "fremhever",
+                                                            "naturligvis", "født", "svakheter", "svakhet", "arver", "lidelse","lidelsen","lidelser", "eksempler", "lammet", "setninger",
+                                                            "sykdom", "sykdomen", "sykdomer", "sykdomene", "veie", "medfødt", "vokser", "vokste", "medelever", "elever", "elevene", "betydningen",
+                                                            "drømmen", "drømmene", "egen", "egeninnsats", "egenandel", "egentlig", "sjanser", "sjansene", "bedre", 
+                                                            "lykkes", "optimister", "optimistene", "ligge", "ligger", "liggende", "beslutninger", "pessimister"
 
-                                                        
 
 
-
-
-
-
-                                                            
-                                                            
                                                             
                                                             );
 
-    private static List<String> nynorskOrdbok = Arrays.asList("tilgang", "åtvaring", "vere", "kjem", "ein", "vart", "berre", "nokon", "dei", "seie", "ein", "eit","tru","bu","mykje",
-                                                            "desse", "gjer", "fekk", "veg", "stad", "framleis", "finst", "seier", "eg", "ikkje", "ho", "frå",   "då", "honom", "no", "noko",
+    private static List<String> nynorskOrdbok = Arrays.asList("tilgang", "åtvaring", "vere", "kjem", "ein", "vart", "berre", "noko", "dei", "seie", "ein", "eit","tru","bu","mykje",
+                                                            "desse", "gjer", "fekk", "veg", "stad", "framleis", "finst", "seier", "eg", "ikkje", "ho", "frå",   "då", "honom", "no", "nokon",
                                                             "dykk", "ho", "skjølv", "vore", "gjekk", "meir", "kva", "kor", "sidan", "heile", "gong", "saman", "skulen", "ska", "synast",
                                                             "elskar", "noreg", "gut", "gløyme", "gløymer", "gløymt", "skriv", "skrive", "skreiv", "hata", "kvifor", "veke", "nærleiken", "korkje", "høyre",
                                                             "mjølk", "bilar", "kastar", "kasta", "kasta", "nyleg", "ærleg", "ovleg", "bustad", "mogleg", "roleg", "korleis", "frykteleg", "høgleg", "lovleg", "synleg", "kunstleg",
@@ -78,16 +98,32 @@ public class Translation {
                                                             "bestilling", "bestillingsfullmakt", "bestå av", "nemning", "føresetja", "vilkår",
                                                             "betinget", "betala", "vurdera", "syn", "forsvarleg",
                                                             "innebera","inneberar", "monaleg", "følgje", "flytta", "rørsle", "grunn", "løyva", 
-                                                            "løyving","løyve", "medviten", "medvit", "yta", "godkjenna","ytar","teikn"
-                                                    
-                                                            
-                                                            
+                                                            "løyving","løyve", "medviten", "medvit", "yta", "godkjenna","ytar","teikn",
+                                                            "gongen", "bod", "bodet", "påbod", "påbodet",
+                                                            "menneske", "inneheld", "innehaldne","bakteriar","bakteriane", "alvorleg",
+                                                            "forbod", "forbodne", "område", "hundar", "hundane",
+                                                            "eigar", "eigaren", "dyra", "tiltrekkjande", "liggjande",
+                                                            "vegar", "vegane", "stiar", "kyrkjegardar ", "kyrkje", "gard", "gardar", "gardane", "gravplassar",
+                                                            "posar", "hundeposar", "bilete", "biletet","bileta", "open", "sjølvsikker","tek","finna", "personleg", "personlegdom", "personlegdomstype",
+                                                            "innanfor", "innan", "openheit", "planmessigheit", "omgjengelighet", "nysgjerrigheit", "evne", "tolerera", "uvisse", "sjølvdisiplin",
+                                                            "pliktoppfyllande", "oppfyllande", "ansvarleg", "grada", "føretrekkjer", "tilbøyeleg", "situasjonar", "situasjonane",
+                                                            "beskriv", "byggja", "byggjar", "oppleva", "trekka", "funne",
+                                                            "brukast", "føreseia", "relasjonar", "personlegdomspsykologi", "aspekt", "speler", "spelte",
+                                                            "avgjerande", "verda", "me", "strukturar", "strukturane", "familiestrukturar", "familiestrukturane",
+                                                            "metodar", "skil", "resultat", "oppseding", "omfattande", "studiar", "studiane", "gjeld", "landa",
+                                                            "sikrar", "familiar", "ordningar", "legg", "kjønna", "kontinent", "kulturar", "kulturane",
+                                                            "rekkje", "blir spegla", "spegel", "spegelen", "speglane", "deira", "forventningar", "prestasjonane", "prestasjonar",
+                                                            "oppsedninga", "oppdrege", "høge", "tilhøyrsel", "endringar", "endringane", "auka", "aukande", "auka", "mangfald", "mangfaldig",
+                                                            "typar", "anerkjenninga", "dynamikkar", "innverknad", "endra", "kvarandre", "implikasjonar",
+                                                            "tilgjengelegheit", "erkjenna", "mangfaldet", "verdiar", "utfordra", "styrkja", "samanhengen", "samanheng", "krev",
+                                                            "forskarar", "politikarar", "utdanningsinstitusjonar", "politikarane", "ønskjer", "tenkjer", "faktorar",
+                                                            "lagnader", "lagnad", "lagnadene", "medan", "slit", "avgjer", "finst", "teoriar", "framhevar", "naturlegvis",
+                                                            "fødde", "svakheiter", "svakheit", "arvar", "liding", "lidinga","lidinga", "døme", "lamma", "setningar", 
+                                                            "sjukdom", "sjukdommen", "sjukdommar", "sjukdommane", "vega","medfødd", "veks", "voks", "medelevar", "elevar", "elevane", "betydninga",
+                                                            "draumen", "draumane", "eigen", "eigeninnsats", "eigenandel", "eigentleg", "sjansar", "sjansane", "betre",
+                                                            "lykkast", "optimistar", "optimistane", "liggja", "ligg", "liggjande", "avgjerder", "pessimistar"
 
-                                                            
 
-
-
-                                                        
 
 
 
@@ -184,10 +220,25 @@ public class Translation {
         return this.bokmålStatus;
     }
 
-    public static void main(String[] args) { //test kode
+    public void writeToFile(String content) throws IOException {
 
-        Translation demo = new Translation("medvit", false);
-        demo.getTranslation();
+        //String translation = getTranslation();
+
+        final String DOCUMENTS_PATH = Paths.get(System.getProperty("user.home"), "Documents").toString();
+        String filePath = Paths.get(DOCUMENTS_PATH, "output.txt").toString();
+
+         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath,false))) {
+            writer.write(content);
+            writer.write("\n");
+            writer.close();
+        }
+    }
+
+    public static void main(String[] args) throws IOException { //test kode
+
+        Translation demo = new Translation("du burde ikke dra til norge i vinter", true);
+        String translation = demo.getTranslation();
+        demo.writeToFile(translation);
 
     }
     

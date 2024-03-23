@@ -4,31 +4,37 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" maxHeight="320.0" maxWidth="470.0" prefHeight="320.0" prefWidth="470.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.PrimaryController">
+<VBox alignment="CENTER" maxHeight="374.0" maxWidth="639.0" prefHeight="374.0" prefWidth="639.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.PrimaryController">
    <children>
-      <Label text="Oversetter" />
+      <Label prefHeight="17.0" prefWidth="135.0" text="Oversetter  - Version: 1.5" />
       <CheckBox fx:id="bokmålBoolean" mnemonicParsing="false" selected="true" text="Bokmål til nynorsk?" />
       <SplitPane prefHeight="160.0" prefWidth="200.0">
         <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="157.0" prefWidth="428.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="157.0" prefWidth="333.0">
                <children>
-                  <TextArea fx:id="inputText" layoutX="14.0" layoutY="20.0" prefHeight="118.0" prefWidth="248.0" promptText="Skriv inn her:" wrapText="true" />
-                  <Label fx:id="outputLabel" layoutX="272.0" layoutY="20.0" maxWidth="200" text="Output:" wrapText="true" />
+                  <TextArea fx:id="inputText" layoutX="35.0" layoutY="20.0" prefHeight="118.0" prefWidth="248.0" promptText="Skriv inn her:" wrapText="true" />
+                  <ScrollPane layoutX="293.0" layoutY="20.0" prefHeight="118.0" prefWidth="263.0">
+                     <content>
+                        <Label fx:id="outputLabel" maxWidth="200" text="Output:" wrapText="true" />
+                     </content>
+                  </ScrollPane>
                </children>
             </AnchorPane>
         </items>
       </SplitPane>
-      <HBox maxWidth="148.0" prefHeight="25.0" prefWidth="148.0">
+      <HBox maxWidth="233.0" prefHeight="25.0" prefWidth="222.0">
          <children>
-            <Button fx:id="primaryButton" onAction="#translateText" text="Oversett" />
-            <Button fx:id="copyButton" mnemonicParsing="false" onAction="#copyToClipboard" text="Kopier" />
-            <Button fx:id="manualButton" mnemonicParsing="false" onAction="#switchToSecondary" text="?" />
+            <Button fx:id="primaryButton" onAction="#translateText" prefHeight="25.0" prefWidth="68.0" text="Oversett" />
+            <Button fx:id="copyButton" mnemonicParsing="false" onAction="#copyToClipboard" prefHeight="25.0" prefWidth="59.0" text="Kopier" />
+            <Button fx:id="toFile" mnemonicParsing="false" onAction="#toFile" text="Skriv til fil" />
+            <Button fx:id="manualButton" mnemonicParsing="false" onAction="#switchToSecondary" prefHeight="25.0" prefWidth="39.0" text="?" />
          </children>
          <opaqueInsets>
             <Insets />
