@@ -13,7 +13,7 @@
 
 <VBox alignment="CENTER" maxHeight="374.0" maxWidth="639.0" prefHeight="374.0" prefWidth="639.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.PrimaryController">
    <children>
-      <Label prefHeight="17.0" prefWidth="124.0" text="Oversetter  -  Alpha 1.0" />
+      <Label prefHeight="17.0" prefWidth="167.0" text="Oversetter  -  Version 1.0 (beta)" />
       <CheckBox fx:id="bokmålBoolean" mnemonicParsing="false" selected="true" text="Bokmål til nynorsk?" />
       <SplitPane prefHeight="160.0" prefWidth="200.0">
         <items>
@@ -22,7 +22,7 @@
                   <TextArea fx:id="inputText" layoutX="35.0" layoutY="20.0" prefHeight="118.0" prefWidth="248.0" promptText="Skriv inn her:" wrapText="true" />
                   <ScrollPane layoutX="293.0" layoutY="20.0" prefHeight="118.0" prefWidth="263.0">
                      <content>
-                        <Label fx:id="outputLabel" maxWidth="200" text="Output:" wrapText="true" />
+                        <Label fx:id="outputLabel" maxWidth="200" text="" wrapText="true" />
                      </content>
                   </ScrollPane>
                </children>
