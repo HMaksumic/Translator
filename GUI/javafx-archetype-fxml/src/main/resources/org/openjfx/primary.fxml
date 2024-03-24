@@ -13,7 +13,7 @@
 
 <VBox alignment="CENTER" maxHeight="374.0" maxWidth="639.0" prefHeight="374.0" prefWidth="639.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.PrimaryController">
    <children>
-      <Label prefHeight="17.0" prefWidth="135.0" text="Oversetter  - Version: 1.5" />
+      <Label prefHeight="17.0" prefWidth="124.0" text="Oversetter  -  Alpha 1.0" />
       <CheckBox fx:id="bokmålBoolean" mnemonicParsing="false" selected="true" text="Bokmål til nynorsk?" />
       <SplitPane prefHeight="160.0" prefWidth="200.0">
         <items>

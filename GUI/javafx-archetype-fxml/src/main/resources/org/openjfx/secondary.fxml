@@ -24,7 +24,7 @@
                <font>
                   <Font size="10.0" />
                </font></Label>
-            <Label layoutX="15.0" layoutY="154.0" prefHeight="17.0" prefWidth="221.0" text="Kvalitet av oversettelse kan variere.">
+            <Label layoutX="15.0" layoutY="146.0" prefHeight="34.0" prefWidth="221.0" text="Du kan finne &quot;maksumoutput.txt&quot; i dokumenter mappen dersom du skriver til fil." wrapText="true">
                <font>
                   <Font size="10.0" />
                </font>

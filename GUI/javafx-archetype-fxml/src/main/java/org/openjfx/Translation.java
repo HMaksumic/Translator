@@ -225,7 +225,7 @@ public class Translation {
         //String translation = getTranslation();
 
         final String DOCUMENTS_PATH = Paths.get(System.getProperty("user.home"), "Documents").toString();
-        String filePath = Paths.get(DOCUMENTS_PATH, "output.txt").toString();
+        String filePath = Paths.get(DOCUMENTS_PATH, "maksumoutput.txt").toString();
 
          try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath,false))) {
             writer.write(content);
