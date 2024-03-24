@@ -70,11 +70,11 @@ public class PrimaryController {
         String translatedOutput = translate.getTranslation();
         translate.writeToFile(translatedOutput);
 
-        toFile.setText("Skrevet!");
+        //toFile.setText("Skrevet!");
 
-        PauseTransition delay = new PauseTransition(Duration.seconds(2)); //skaper en pause på 2 sek
-        delay.setOnFinished(actionEvent -> toFile.setText("Skriv til fil")); //setter teksten til knappen tilbake etter pausen
-        delay.play();
+       // PauseTransition delay = new PauseTransition(Duration.seconds(2)); //skaper en pause på 2 sek
+        //delay.setOnFinished(actionEvent -> toFile.setText("Skriv til fil")); //setter teksten til knappen tilbake etter pausen
+       // delay.play();
 
     }
 }
