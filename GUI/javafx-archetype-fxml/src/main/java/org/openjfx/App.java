@@ -22,7 +22,7 @@ public class App extends Application {
         stage.setScene(scene);
         stage.setTitle("Maksum Translate");
 
-        Image appIcon = new Image(App.class.getResourceAsStream("appIcon.png"));
+        Image appIcon = new Image(App.class.getResourceAsStream("/appIcon.png"));
         stage.getIcons().clear(); 
         stage.getIcons().add(appIcon); 
         stage.show();
