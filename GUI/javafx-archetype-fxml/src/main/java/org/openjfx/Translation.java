@@ -18,6 +18,10 @@ public class Translation {
     private boolean bokmålStatus;
     
     Translation(String text, boolean bokmålStatus) {
+        if (text == null) {
+            throw new IllegalArgumentException();
+        }
+
         this.bokmålStatus = bokmålStatus;
         text.toLowerCase();
 
@@ -115,7 +119,7 @@ public class Translation {
 
     public static void main(String[] args) throws IOException { //test kode
 
-        Translation demo = new Translation("adgang!", true);
+        Translation demo = new Translation("test", true);
         String translation = demo.getTranslation();
         demo.writeToFile(translation);
 

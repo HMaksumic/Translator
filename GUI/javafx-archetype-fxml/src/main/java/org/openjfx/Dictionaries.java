@@ -1,6 +1,8 @@
 package org.openjfx;
 
 import java.io.BufferedReader;
+//import java.io.BufferedWriter;
+//import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -9,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Dictionaries {
+public class Dictionaries implements DictionaryUtility{
 
     private List<String> bokmålDictionary;
     private List<String> nynorskDictionary;
@@ -19,7 +21,8 @@ public class Dictionaries {
         this.nynorskDictionary = readFileToList("/Dictionaries/Nynorsk Dictionary.txt");
     }
 
-    private List<String> readFileToList(String resourcePath) {
+    @Override
+    public List<String> readFileToList(String resourcePath) {
         List<String> list = new ArrayList<>();
         
         try (InputStream is = getClass().getResourceAsStream(resourcePath);
@@ -33,7 +36,7 @@ public class Dictionaries {
         }
         return list;
     }
-                                                            
+
     public List<String> getDictionaryBokmål() {
         return this.bokmålDictionary;
     }

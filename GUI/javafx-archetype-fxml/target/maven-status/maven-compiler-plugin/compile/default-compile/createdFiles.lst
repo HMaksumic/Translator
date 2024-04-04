@@ -1,7 +1,8 @@
 org\openjfx\Translation.class
+org\openjfx\DictionaryUtility.class
+org\openjfx\PrimaryController.class
+org\openjfx\ExportApp.class
 org\openjfx\Dictionaries.class
 module-info.class
-org\openjfx\PrimaryController.class
 org\openjfx\SecondaryController.class
-org\openjfx\ExportApp.class
 org\openjfx\App.class
