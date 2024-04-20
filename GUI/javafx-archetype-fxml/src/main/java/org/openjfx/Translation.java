@@ -16,16 +16,18 @@ public class Translation {
     private List<String> translatedText = new ArrayList<>();
     private String translatedString = "";
     private boolean bokmålStatus;
+    private String text;
     
     Translation(String text, boolean bokmålStatus) {
         if (text == null) {
             throw new IllegalArgumentException();
         }
+        this.text = text.toLowerCase();
 
         this.bokmålStatus = bokmålStatus;
         text.toLowerCase();
 
-        String[] splitText = text.split(" ");  //"jeg går til skolen!" ----> ["jeg", "går", "til", "skolen!"]
+        String[] splitText = this.text.split(" ");  //"jeg går til skolen!" ----> ["jeg", "går", "til", "skolen!"]
         for (String word : splitText) {
             this.dividedText.add(word);
         }
@@ -119,7 +121,7 @@ public class Translation {
 
     public static void main(String[] args) throws IOException { //test kode
 
-        Translation demo = new Translation("test", true);
+        Translation demo = new Translation("ADGANG", true);
         String translation = demo.getTranslation();
         demo.writeToFile(translation);
 
